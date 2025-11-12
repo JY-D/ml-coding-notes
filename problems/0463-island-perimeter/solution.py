@@ -1,0 +1,5 @@
+# Island Perimeter — skeleton
+from typing import List
+
+class Solution:
+    pass
