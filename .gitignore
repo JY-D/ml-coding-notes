@@ -1,5 +1,19 @@
-__pycache__/
-.pytest_cache/
+# venv / Python cache
 .venv/
-.DS_Store
+__pycache__/
 *.pyc
+*.pyo
+
+# tools caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# editors & OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/settings.json  # if you want to track just this one
