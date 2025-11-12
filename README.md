@@ -47,14 +47,9 @@ requirements.txt        # dev dependencies (pytest/ruff/black/mypy/pre-commit)
 
 ## Add a new problem
 
-You can create folders manually or via a helper script (if present).
-
-**Manual:**
-```
-problems/<id>-<kebab-title>/
-  solution.py
-  NOTES.md
-```
+Create a folder `problems/<id>-<kebab-title>/`, and inside it:
+* NOTES.md (optional)
+* **<snake_title>_solution.py** ← unique, mypy-friendly
 
 **Minimal `solution.py` skeleton:**
 ```python
@@ -70,7 +65,7 @@ if __name__ == "__main__":
     print("OK")
 ```
 
-> CI only requires `solution.py` to be **importable**. You can keep LeetCode-style `class Solution` and method names.
+> CI only requires `*_solution.py` to be **importable**. You can keep LeetCode-style `class Solution` and method names.
 
 ---
 
