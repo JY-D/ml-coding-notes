@@ -3,8 +3,6 @@
 Practice repo for algorithm/data-structure problems with a focus on **robotic perception / ML/AI/DL interviews**.  
 Each problem lives in its own folder under `problems/` and ships with a minimal `solution.py` plus optional notes/tests.
 
-> Convention: **Comments in code are always written in English.**
-
 ---
 
 ## Quick start (Python 3.12, arm64)
