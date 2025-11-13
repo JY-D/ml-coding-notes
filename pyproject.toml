@@ -5,19 +5,21 @@ target-version = ["py312"]
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+exclude = ["**/.venv", "build", "dist"]
+
+[tool.ruff.lint]
 extend-select = [
   "E",   # pycodestyle
   "F",   # pyflakes
   "I",   # isort (import sorting)
   "W",   # warnings
   "UP",  # pyupgrade
-  "B",   # bugbear (common bugs)
+  "B",   # bugbear
   "C4",  # comprehensions
 ]
 ignore = [
   "E203",  # compatible with Black on slice spacing
 ]
-exclude = ["**/.venv", "build", "dist"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["problems"]
