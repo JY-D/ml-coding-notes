@@ -1,11 +1,17 @@
 [tool.black]
 line-length = 100
 target-version = ["py312"]
+exclude = '''
+(
+  /(\.venv|build|dist)/
+  | ^useful_gist/
+)
+'''
 
 [tool.ruff]
 line-length = 100
 target-version = "py312"
-exclude = ["**/.venv", "build", "dist"]
+exclude = ["**/.venv", "build", "dist", "useful_gist"]
 
 [tool.ruff.lint]
 extend-select = [
@@ -27,8 +33,10 @@ known-first-party = ["problems"]
 [tool.mypy]
 python_version = "3.12"
 warn_unused_ignores = true
-disallow_untyped_defs = false      # start lenient; tighten later
-check_untyped_defs = true          # still check bodies of untyped defs
-ignore_missing_imports = true      # ML libs often lack type hints
+disallow_untyped_defs = false
+check_untyped_defs = true
+ignore_missing_imports = true
 no_implicit_optional = true
-exclude = "^problems/.+/solution\\.py$"
+
+# Exclude your gists folder from type checking.
+exclude = '^(useful_gist/)'

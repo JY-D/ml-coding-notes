@@ -7,19 +7,17 @@ repos:
     hooks:
       - id: black
         args: [--line-length=100]
+        exclude: ^useful_gist/
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.7.2
     hooks:
       - id: ruff
         args: [--fix]
+        exclude: ^useful_gist/
       - id: ruff-format
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.11.2
     hooks:
       - id: mypy
-        # make sure mypy reads pyproject.toml
+        args: ["--config-file=pyproject.toml", "."]
         pass_filenames: false
-        args:
-          - --config-file=pyproject.toml
-          - --exclude=^problems/.+/solution\.py$
-          - .
