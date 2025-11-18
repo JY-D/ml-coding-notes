@@ -1,6 +1,7 @@
 from collections import deque
 from typing import Deque
 
+
 def sliding_max(nums: list[int], k: int) -> list[int]:
     """Monotonic deque template: store indices; pop from back while smaller."""
     dq: Deque[int] = deque()

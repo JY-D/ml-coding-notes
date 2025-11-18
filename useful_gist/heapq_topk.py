@@ -8,6 +8,7 @@ import heapq
 from typing import Iterable, Iterator, List, Tuple, Dict, Any
 import pdb
 
+
 def top_k_numbers(nums: Iterable[int], k: int) -> List[int]:
     """
     Return the top-k largest numbers from a stream/iterable in descending order.
@@ -52,10 +53,12 @@ def kth_largest_number(nums: Iterable[int], k: int) -> int:
     heap: List[int] = []
     for x in nums:
         if len(heap) < k:
-            heapq.heappush(heap, x) #sift up, compare with parent node O(logn)
+            heapq.heappush(heap, x)  # sift up, compare with parent node O(logn)
         else:
             if x > heap[0]:
-                heapq.heapreplace(heap, x) #sift down, swap with smaller child node. (won't swap with sibling)
+                heapq.heapreplace(
+                    heap, x
+                )  # sift down, swap with smaller child node. (won't swap with sibling)
 
     if len(heap) < k:
         raise ValueError("not enough elements for k-th largest")
