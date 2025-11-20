@@ -13,9 +13,9 @@ def _find_problem_folder() -> pathlib.Path:
     repo = pathlib.Path(__file__).resolve().parents[1]
     problems = repo / "problems"
     candidates = sorted(problems.glob("*1091-shortest-path-in-binary-matrix"))
-    assert candidates, (
-        "Could not find a folder matching '*1091-shortest-path-in-binary-matrix'" " under problems/"
-    )
+    assert (
+        candidates
+    ), "Could not find a folder matching '*1091-shortest-path-in-binary-matrix' under problems/"
     return candidates[0]
 
 

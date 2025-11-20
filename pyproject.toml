@@ -9,7 +9,7 @@ exclude = '''
 '''
 
 [tool.ruff]
-line-length = 100
+line-length = 120
 target-version = "py312"
 exclude = ["**/.venv", "build", "dist", "useful_gist"]
 
@@ -29,6 +29,9 @@ ignore = [
 
 [tool.ruff.lint.isort]
 known-first-party = ["problems"]
+
+[tool.ruff.lint.per-file-ignores]
+"problems/waabi-scenario-eval/*.py" = ["E501"]
 
 [tool.mypy]
 python_version = "3.12"
