@@ -33,9 +33,7 @@ def locker():
     assert hasattr(mod, "Solution"), "Expected class `Solution` in solution module"
     obj = mod.Solution()
     # Accept either openLock or solve method
-    assert hasattr(obj, "openLock") or hasattr(
-        obj, "solve"
-    ), "Expected method `openLock` or `solve` in Solution"
+    assert hasattr(obj, "openLock") or hasattr(obj, "solve"), "Expected method `openLock` or `solve` in Solution"
     return obj
 
 

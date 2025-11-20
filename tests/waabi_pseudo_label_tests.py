@@ -4,9 +4,7 @@ from pathlib import Path
 
 import pytest
 
-solution_path = (
-    Path(__file__).parent.parent / "problems" / "waabi-pseudo-label" / "pseudo_label_solution.py"
-)
+solution_path = Path(__file__).parent.parent / "problems" / "waabi-pseudo-label" / "pseudo_label_solution.py"
 
 
 def run_solution(input_data: str) -> str:

@@ -2,9 +2,7 @@ import sys
 from collections import deque
 
 
-def bfs(
-    grid: list[list[int]], start_r: int, start_c: int, rows: int, cols: int
-) -> list[tuple[int, int]]:
+def bfs(grid: list[list[int]], start_r: int, start_c: int, rows: int, cols: int) -> list[tuple[int, int]]:
     """BFS to find all cells in one connected component.
     Modifies grid in-place by marking visited cells as 0.
     """

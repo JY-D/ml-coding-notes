@@ -13,9 +13,7 @@ def main() -> None:
     mid_conf: list[str] = []
     low_conf: list[str] = []
 
-    label_stats: dict[str, dict[str, Any]] = defaultdict(
-        lambda: {"scores": [], "HIGH": 0, "MID": 0, "LOW": 0}
-    )
+    label_stats: dict[str, dict[str, Any]] = defaultdict(lambda: {"scores": [], "HIGH": 0, "MID": 0, "LOW": 0})
 
     for i in range(1, n + 1):
         parts = input_data[i].split(",")

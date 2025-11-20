@@ -5,10 +5,7 @@ from pathlib import Path
 import pytest
 
 solution_path = (
-    Path(__file__).parent.parent
-    / "problems"
-    / "waabi-connected-components"
-    / "connected_components_solution.py"
+    Path(__file__).parent.parent / "problems" / "waabi-connected-components" / "connected_components_solution.py"
 )
 
 

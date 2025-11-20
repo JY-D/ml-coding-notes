@@ -5,9 +5,7 @@ from pathlib import Path
 import pytest
 
 # Solution path
-solution_path = (
-    Path(__file__).parent.parent / "problems" / "waabi-scenario-eval" / "scenario_eval_solution.py"
-)
+solution_path = Path(__file__).parent.parent / "problems" / "waabi-scenario-eval" / "scenario_eval_solution.py"
 
 
 def run_solution(input_data: str) -> str:

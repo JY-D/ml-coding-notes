@@ -5,12 +5,7 @@ from pathlib import Path
 import pytest
 
 # Load the solution module dynamically
-solution_path = (
-    Path(__file__).parent.parent
-    / "problems"
-    / "207-course-schedule"
-    / "course_schedule_solution.py"
-)
+solution_path = Path(__file__).parent.parent / "problems" / "207-course-schedule" / "course_schedule_solution.py"
 spec = importlib.util.spec_from_file_location("course_schedule_solution", solution_path)
 if spec is None or spec.loader is None:
     raise ImportError(f"Cannot load module from {solution_path}")
