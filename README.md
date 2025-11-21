@@ -1,7 +1,7 @@
 # Machine Learning — Coding Notes
 
 Practice repo for algorithm/data-structure problems with a focus on **robotic perception / ML/AI/DL interviews**.  
-Each problem lives in its own folder under `problems/` and ships with a minimal `solution.py` plus optional notes/tests.
+Each problem lives in its own folder under `problems/` and ships with a minimal `_solution.py` plus optional notes/tests.
 
 ---
 
@@ -96,7 +96,7 @@ Example per-problem test lives in `tests/test_0733_flood_fill.py` and loads modu
   ```
 
 Notes:
-- We **exclude** `problems/**/solution.py` from mypy to avoid duplicate-module issues (mypy can’t derive a valid package name from `kebab-case` + numeric folders). See `pyproject.toml`.
+- We **exclude** `problems/**/<name>_solution.py` from mypy to avoid duplicate-module issues (mypy can’t derive a valid package name from `kebab-case` + numeric folders). See `pyproject.toml`.
 - In pre-commit, mypy runs with `pass_filenames: false` and an explicit `--exclude` to guarantee the same behavior.
 
 ---
@@ -142,7 +142,7 @@ Typical steps:
 ## FAQ
 
 **Why `test_repo_smoke.py`?**  
-It’s a **smoke test**: fast health-check that every `solution.py` is importable (catches syntax/path issues early).  
+It’s a **smoke test**: fast health-check that every `<name>_solution.py` is importable (catches syntax/path issues early).  
 Behavioral correctness goes in per-problem tests.
 
 **Why exclude `solution.py` from mypy?**  
