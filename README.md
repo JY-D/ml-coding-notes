@@ -30,10 +30,10 @@ pre-commit run --all-files
 ```
 problems/
   0733-flood-fill/
-    solution.py         # your solution (importable by CI smoke test)
+    0733-flood-fill_solution.py  #your solution (importable by CI smoke test)
     NOTES.md            # (optional) reasoning, pitfalls, variants
   0200-number-of-islands/
-    solution.py
+    0200-number-of-islands_solution.py
 tests/
   test_repo_smoke.py    # imports every problems/**/solution.py
   test_0733_flood_fill.py  # example of functional tests
